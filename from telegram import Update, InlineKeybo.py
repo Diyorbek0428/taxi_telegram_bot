@@ -226,7 +226,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
         try:
             await context.bot.send_message(
                 chat_id=client_id,
-                text=f"✅ Sizning so‘rovingiz {driver_name} tomonidan qabul qilindi!\nIltimos, hozirgi joylashuvingizni yuboring."
+                text=f"✅ Sizning so‘rovingiz {driver_name} tomonidan qabul qilindi!\nIltimos, hozirgi joylashuvingizni taxisga yuboring."
             )
         except Exception:
             logger.exception("Mijozga xabar yuborishda xato (accept):")
