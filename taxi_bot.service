@@ -1,0 +1,19 @@
+[Unit]
+Description=Taxi Telegram Bot
+After=network.target
+
+[Service]
+# Change 'youruser' to the server user that owns the project
+User=youruser
+Group=youruser
+WorkingDirectory=/home/youruser/taxi_bot      # <-- change to your project path
+EnvironmentFile=/home/youruser/taxi_bot/.env  # <-- change to your project path
+ExecStart=/home/youruser/taxi_bot/run_bot.sh  # <-- change to your project path
+Restart=always
+RestartSec=5
+TimeoutStartSec=20
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
